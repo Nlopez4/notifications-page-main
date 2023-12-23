@@ -1,0 +1,21 @@
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 30px 20px;
+}
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    h1 {
+        color: hsl(219, 85%, 26%);
+        font-size: 26px;
+    }
+    h2 {
+        color: hsl(219, 12%, 42%);
+        font-size: 16px;
+    }
+}
+.notification {
+    background-color: hsl(210, 60%, 98%);
+}
