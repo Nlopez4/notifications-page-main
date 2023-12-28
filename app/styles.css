@@ -1,0 +1,56 @@
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 30px 20px;
+    margin: 0;
+}
+#main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    h1 {
+        color: hsl(219, 85%, 26%);
+        font-size: 26px;
+    }
+    h2 {
+        color: hsl(219, 12%, 42%);
+        font-size: 16px;
+    }
+}
+.notification-container {
+    background-color: hsl(210, 60%, 98%);
+    pointer-events: all;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+
+    h3 {
+        margin: 0;
+    }
+    h3::after {
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--after-color, red);
+        margin-top: 7px;
+        margin-left: 8px;
+        pointer-events: none;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    .dayof {
+        margin: 7px 0 0 0;
+    }
+}
+#pm {
+    display: none;
+}
