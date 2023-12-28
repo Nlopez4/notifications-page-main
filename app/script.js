@@ -2,7 +2,6 @@ const notificationsContainer = document.querySelectorAll('.notification-containe
 const notifications = document.querySelectorAll('h3');
 const marked = document.querySelector('#marked');
 
-
 function clickNotice(){
     notificationsContainer.forEach(function(notfication){
         notfication.addEventListener("click", function(e){
@@ -20,16 +19,18 @@ function clickNotice(){
         });
     })
 }
-clickNotice();
-
 function clickAll(){
     marked.addEventListener('click', function(e){
         e.preventDefault();
         notificationsContainer.forEach(function(el){
             el.classList.add('read');
+            el.style.backgroundColor = 'white';
+            let afterElement = getComputedStyle(el)
+            el.style.setProperty('--after-color', 'white');
         });
     })
 }
+clickNotice();
 clickAll();
 
 
