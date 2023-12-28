@@ -17,9 +17,10 @@ body {
         color: hsl(219, 85%, 26%);
         font-size: 26px;
     }
-    h2 {
+    #marked {
         color: hsl(219, 12%, 42%);
         font-size: 16px;
+        text-decoration: none;
     }
 }
 .notification-container {
