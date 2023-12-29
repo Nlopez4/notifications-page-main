@@ -25,9 +25,11 @@ body {
 }
 .notification-container {
     background-color: hsl(210, 60%, 98%);
+    border-radius: 10px;
     pointer-events: all;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 0 20px;
     padding: 20px 30px;
 
     h3 {
