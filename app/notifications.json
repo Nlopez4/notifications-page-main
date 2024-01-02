@@ -5,47 +5,52 @@
             "firstName": "Mark",
             "lastName": "Webber",
             "notification": "reacted to your recent post",
-            "sub": "My first tournament today!"
+            "sub": "My first tournament today!",
+            "time": "1 month"
         },
         {   
             "photo": "../assets/images/avatar-angela-gray.webp",
             "firstName": "Angela",
             "lastName": "Gray",
-            "notification": "followed you"
+            "notification": "followed you",
+            "time": "1 month"
         },
         {   
             "photo": "../assets/images/avatar-jacob-thompson.webp",
             "firstName": "Jacob",
             "lastName": "Thompson",
             "notification": "has joined your group",
-            "sub": "Chess Club"
+            "sub": "Chess Club",
+            "time": "1 month"
         },
         {   
             "photo": "../assets/images/avatar-rizky-hasanuddin.webp",
             "firstName": "Rizky",
             "lastName": "Hasanuddin",
             "notification": "sent you a private message",
-            "pm": "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game."
+            "pm": "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.",
+            "time": "1 month"
         },
         {   
             "photo": "../assets/images/avatar-kimberly-smith.webp",
             "firstName": "Kimberly",
             "lastName": "Smith",
-            "notification": "commented on your picture"
+            "notification": "commented on your picture",
+            "time": "1 month"
         },
         {   
             "photo": "../assets/images/avatar-nathan-peterson.webp",
             "firstName": "Nathan",
             "lastName": "Peterson",
             "notification": "reacted to your recent post",
-            "sub": "5 end-game strategies to increase your win rate"
+            "time": "1 month"
         },
         {   
             "photo": "../assets/images/avatar-anna-kim.webp",
             "firstName": "Anna",
             "lastName": "Kim",
             "notification": "left the group",
-            "sub": "Chess Club"
+            "time": "1 month"
         }
     ]
 }
