@@ -1,26 +1,26 @@
-const notificationsContainer = document.querySelectorAll('.notification-container');
+// const notificationsContainer = document.querySelectorAll('.notification-container');
+const mainContainer = document.querySelector('#main-container');
 const markAll = document.querySelector('#marked');
 
-function clickNotice(){
-    notificationsContainer.forEach(function(notfication){
-        notfication.addEventListener("click", function(e){
-            e.preventDefault();
-            notfication.style.backgroundColor = 'white';
-            let afterElement = getComputedStyle(notfication)
-            notfication.style.setProperty('--after-color', 'white');
-        });
-    });
-    markAll.addEventListener('click', function(e){
-        e.preventDefault();
-        notificationsContainer.forEach(function(el){
-            el.classList.add('read');
-            el.style.backgroundColor = 'white';
-            let afterElement = getComputedStyle(el)
-            el.style.setProperty('--after-color', 'white');
-        });
-    });
-};
-clickNotice();
+async function renderData(){
+    const response = await fetch("notifications.json");
+    const data = await response.json();
+    createElements(data);
+}
+renderData();
+
+function createElements(data){
+    const {notifications} = data;
+    for (let i of notifications){
+        console.log(notifications)
+        let container = document.createElement('div');
+        container.className = 'notification-container'
+        container.innerHTML = i.firstName + ' ' + i.lastName;
+        mainContainer.appendChild(container)
+    }
+}
+
+
 
 
 
