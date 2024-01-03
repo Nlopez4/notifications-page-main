@@ -1,4 +1,3 @@
-// const notificationsContainer = document.querySelectorAll('.notification-container');
 const mainContainer = document.querySelector('#main-container');
 const markAll = document.querySelector('#marked');
 
@@ -17,24 +16,26 @@ function createElements(data){
         const userImage = document.createElement('img');
         const rightContainer = document.createElement('div');
         const notificationTag = document.createElement('a');
-        const time = document.createElement('p');
 
         notificationContainer.className = 'notification-container';
         leftContainer.className = 'container-left';
         rightContainer.className = 'container-right';
-        rightContainer.innerHTML = `<h3><span class="name">${notification.firstName + ' ' + notification.lastName}</span> ${notification.notification} <span class="sub">${notification.sub}</span></h3>`
+        userImage.className = 'userImage'
         userImage.src = notification.photo;
         notificationTag.className = 'notifications';
-        time.className = 'time';
-        time.innerHTML = notification.time;
+
         
         mainContainer.appendChild(notificationContainer);
         notificationContainer.appendChild(leftContainer);
         notificationContainer.appendChild(rightContainer);
         leftContainer.appendChild(userImage);
         rightContainer.appendChild(notificationTag);
-        rightContainer.appendChild(time);
 
+        if (notification.sub === null) {
+            rightContainer.innerHTML = `<h3><span class="name">${notification.firstName + ' ' + notification.lastName}</span> ${notification.notification}</h3> <div><p class="time">${notification.time}</p></div>`;
+        } else {
+            rightContainer.innerHTML = `<h3><span class="name">${notification.firstName + ' ' + notification.lastName}</span> ${notification.notification} <span class="sub">${notification.sub}</span></h3> <div><p class="time">${notification.time}</p></div>`;
+        }
     }
 }
 
