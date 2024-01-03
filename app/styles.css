@@ -57,10 +57,16 @@ body {
         margin: 0;
         color: hsl(219, 14%, 63%);
         font-weight: 500;
-        .name {
-            color: hsl(224, 21%, 14%);
-            font-weight: 800;
-        }
+        font-size: 16px;
+    }
+    .name {
+        color: hsl(224, 21%, 14%);
+        font-weight: 800;
+        /* padding-right: 4px; */
+    }
+    .sub:hover {
+        color: hsl(219, 85%, 26%);
+        font-weight: 800;
     }
     h3::after {
         position: absolute;
@@ -69,13 +75,15 @@ body {
         height: 10px;
         border-radius: 50%;
         background-color: var(--after-color, red);
-        margin-top: 7px;
+        margin-top: 4px;
         margin-left: 8px;
         pointer-events: none;
     }
     a {
         text-decoration: none;
         color: black;
+        display: flex;
+        flex-direction: row;
     }
     .time {
         margin: 7px 0 0 0;

@@ -17,15 +17,14 @@ function createElements(data){
         const userImage = document.createElement('img');
         const rightContainer = document.createElement('div');
         const notificationTag = document.createElement('a');
-        const h3 = document.createElement('h3');
         const time = document.createElement('p');
 
         notificationContainer.className = 'notification-container';
         leftContainer.className = 'container-left';
         rightContainer.className = 'container-right';
+        rightContainer.innerHTML = `<h3><span class="name">${notification.firstName + ' ' + notification.lastName}</span> ${notification.notification} <span class="sub">${notification.sub}</span></h3>`
         userImage.src = notification.photo;
         notificationTag.className = 'notifications';
-        h3.innerHTML = notification.firstName + ' ' + notification.lastName + ' ' + notification.notification;
         time.className = 'time';
         time.innerHTML = notification.time;
         
@@ -34,7 +33,6 @@ function createElements(data){
         notificationContainer.appendChild(rightContainer);
         leftContainer.appendChild(userImage);
         rightContainer.appendChild(notificationTag);
-        notificationTag.appendChild(h3);
         rightContainer.appendChild(time);
 
     }
