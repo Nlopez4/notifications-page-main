@@ -35,9 +35,17 @@ function createElements(data){
             rightContainer.innerHTML = `<h3><span class="name">${notification.firstName + ' ' + notification.lastName}</span> ${notification.notification}</h3> <div><p class="time">${notification.time}</p></div>`;
         } else {
             rightContainer.innerHTML = `<h3><span class="name">${notification.firstName + ' ' + notification.lastName}</span> ${notification.notification} <span class="sub">${notification.sub}</span></h3> <div><p class="time">${notification.time}</p></div>`;
-        }
-    }
-}
+        };
+
+        notificationContainer.addEventListener('click', function(e){
+            e.preventDefault();
+            notificationContainer.classList.add('read');
+            notificationContainer.style.backgroundColor = 'white';
+            let afterElement = getComputedStyle(notificationContainer);
+            notificationContainer.style.setProperty('--after-color', 'white');
+        });
+    };
+};
 
 
 
