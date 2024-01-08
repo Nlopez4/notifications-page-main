@@ -6,6 +6,7 @@
             "lastName": "Webber",
             "notification": "reacted to your recent post",
             "sub": "My first tournament today!",
+            "pm": null,
             "time": "1m ago"
         },
         {   
@@ -14,6 +15,7 @@
             "lastName": "Gray",
             "notification": "followed you",
             "sub": null,
+            "pm": null,
             "time": "5m ago"
         },
         {   
@@ -22,6 +24,7 @@
             "lastName": "Thompson",
             "notification": "has joined your group",
             "sub": "Chess Club",
+            "pm": null,
             "time": "1 day ago"
         },
         {   
@@ -39,6 +42,7 @@
             "lastName": "Smith",
             "notification": "commented on your picture",
             "sub": null,
+            "pm": null,
             "time": "1 week ago"
         },
         {   
@@ -47,6 +51,7 @@
             "lastName": "Peterson",
             "notification": "reacted to your recent post",
             "sub": "5 end-game strategies to increase your win rate",
+            "pm": null,
             "time": "2 weeks ago"
         },
         {   
@@ -55,6 +60,7 @@
             "lastName": "Kim",
             "notification": "left the group",
             "sub": "Chess Club",
+            "pm": null,
             "time": "2 weeks ago"
         }
     ]
