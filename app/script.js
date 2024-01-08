@@ -44,7 +44,7 @@ function createElements(data){
             let afterElement = getComputedStyle(notificationContainer);
             notificationContainer.style.setProperty('--after-color', 'white');
             notificationContainer.setAttribute("disabled", "");
-        }
+        };
     
         notificationContainer.addEventListener('click', function(e){
             e.preventDefault();
@@ -52,6 +52,12 @@ function createElements(data){
             notificationCount--;
             notificationNum.innerHTML = notificationCount;
         }, {once: true});
+
+        markAll.addEventListener('click', function(e){
+            e.preventDefault();
+            readStyles();
+            notificationNum.innerHTML = 0;
+        });
     };
 };
 
