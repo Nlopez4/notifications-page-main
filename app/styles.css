@@ -100,6 +100,12 @@ body {
         color: hsl(219, 14%, 63%);
     }
 }
-#pm {
-    display: none;
+.pm-container {
+    display: none; 
+    border: 1px solid hsl(219, 14%, 63%);
+    padding: 20px;
+    margin-top: 10px;
+    p {
+        margin: 0; 
+    }
 }
