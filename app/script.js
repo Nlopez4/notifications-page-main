@@ -1,5 +1,7 @@
 const mainContainer = document.querySelector('#main-container');
 const markAll = document.querySelector('#marked');
+const notificationNum = document.querySelector('#numOfNotifications');
+let notificationCount = 7;
 
 async function renderData(){
     const response = await fetch("notifications.json");
@@ -24,7 +26,6 @@ function createElements(data){
         userImage.src = notification.photo;
         notificationTag.className = 'notifications';
 
-        
         mainContainer.appendChild(notificationContainer);
         notificationContainer.appendChild(leftContainer);
         notificationContainer.appendChild(rightContainer);
@@ -37,15 +38,23 @@ function createElements(data){
             rightContainer.innerHTML = `<h3><span class="name">${notification.firstName + ' ' + notification.lastName}</span> ${notification.notification} <span class="sub">${notification.sub}</span></h3> <div><p class="time">${notification.time}</p></div>`;
         };
 
-        notificationContainer.addEventListener('click', function(e){
-            e.preventDefault();
+        function readStyles(){
             notificationContainer.classList.add('read');
             notificationContainer.style.backgroundColor = 'white';
             let afterElement = getComputedStyle(notificationContainer);
             notificationContainer.style.setProperty('--after-color', 'white');
-        });
+            notificationContainer.setAttribute("disabled", "");
+        }
+    
+        notificationContainer.addEventListener('click', function(e){
+            e.preventDefault();
+            readStyles();
+            notificationCount--;
+            notificationNum.innerHTML = notificationCount;
+        }, {once: true});
     };
 };
+
 
 
 
