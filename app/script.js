@@ -47,17 +47,28 @@ function createElements(data){
             notificationContainer.style.pointerEvents = 'none';
         };
     
+        function displayPM(){
+            if (notification.pm === null) {
+                rightContainer.innerHTML = `<h3><span class="name">${notification.firstName + ' ' + notification.lastName}</span> ${notification.notification}</h3> <div><p class="time">${notification.time}</p></div>`;
+            } else {
+                rightContainer.innerHTML = `<h3><span class="name">${notification.firstName + ' ' + notification.lastName}</span> ${notification.notification}</h3> <div><p class="time">${notification.time}</p> <div class="pm-container"><p>${notification.pm}</p></div></div>`;
+            };
+    
+        }
+
         notificationContainer.addEventListener('click', function(e){
             e.preventDefault();
             readStyles();
             notificationCount--;
             notificationNum.innerHTML = notificationCount;
+            displayPM();
         }, {once: true});
 
         markAll.addEventListener('click', function(e){
             e.preventDefault();
             readStyles();
             notificationNum.innerHTML = 0;
+            displayPM();
         });
     };
 };
