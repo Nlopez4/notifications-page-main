@@ -44,6 +44,7 @@ function createElements(data){
             let afterElement = getComputedStyle(notificationContainer);
             notificationContainer.style.setProperty('--after-color', 'white');
             notificationContainer.setAttribute("disabled", "");
+            notificationContainer.style.pointerEvents = 'none';
         };
     
         notificationContainer.addEventListener('click', function(e){
